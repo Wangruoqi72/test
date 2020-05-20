@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style2.css"/>
+		<style>
+		* {
+		  margin: 0px;
+		  padding: 0px;
+		}
+		
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+		
+		html {
+		  box-sizing: border-box;
+		}
+		
+		body {
+		  font-family: Arial, sans-serif;
+		  font-size: 18px;
+		  border-top: 6px #ffb366 solid;
+		  color: #006400;
+		  background-color: #f0fff0;
+		}
+		
+		li {
+		  margin-left: 30px;
+		}
+		
+		a {
+		  color: #ffb366;
+		  text-decoration: none;
+		}
+		
+		a:hover {
+		  text-decoration: underline;
+		}
+		
+		table {
+		  border-collapse: collapse;
+		  border-spacing: 0;
+		}
+		
+		th {
+		  font-weight: bold;
+		}
+		
+		th, td {
+		  padding: 12px 15px;
+		  border-bottom: 1px solid #E1E1E1;
+		}
+		.button{
+			color: #ffb366;
+			padding: 12px 15px;
+			border-bottom: 1px solid #E1E1E1;
+		}
+		</style>
+\
+	</head>
+	<body>
+		
+			<!-- imag标签是用来显示图片的标签，属性显示图片来源 -->
+			 <img src="img/00.jpg" id="clothes" width="400px" height="300px" left: 800px top: 100rem;;> 
+			 <img src="img/000.jpg" id="clothesnew" width="400px" height="300px" left: 100px top: -0.625rem;;> 
+		 <br>
+		 <div class="button">
+		<button id='change'>点我放置轮廓图</button>
+		<button id='next'>点我生成对应成果图</button>
+		</div>
+		<script type="text/javascript">
+			var clothes=document.getElementById('clothes');
+			var nextBtn=document.getElementById('change');
+			var prevBtn=document.getElementById('next');
+			var Index=1,num=1;
+			nextBtn.onclick=function(){
+				if(Index%4==0){
+				clothes.setAttribute('src','img/001.jpg');
+				}
+				if(Index%4==1){
+				clothes.setAttribute('src','img/002.jpg');
+				}
+				if(Index%4==2){
+				clothes.setAttribute('src','img/003.jpg');
+				}
+				if(Index%4==3){
+				clothes.setAttribute('src','img/004.jpg');
+				}
+				Index++;
+				
+			}
+			prevBtn.onclick=function(){
+				if((Index-1)%4==0){
+				clothesnew.setAttribute('src','img/0001.jpg');
+				}
+				if((Index-1)%4==1){
+				clothesnew.setAttribute('src','img/0002.jpg');
+				}
+				if((Index-1)%4==2){
+				clothesnew.setAttribute('src','img/0003.jpg');
+				}
+				if((Index-1)%4==3){
+				clothesnew.setAttribute('src','img/0004.jpg');
+				}
+			}
+		</script>
+	</body>
+</html>
